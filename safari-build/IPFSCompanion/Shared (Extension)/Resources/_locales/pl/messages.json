@@ -1,0 +1,934 @@
+{
+  "browserAction_title": {
+    "message": "Asystent IPFS",
+    "description": "A pop-up title when user hovers on Browser Action button (browserAction_title)"
+  },
+  "panel_headerIpfsNodeIconLabel": {
+    "message": "Asystent IPFS",
+    "description": "A label for IPFS icon (panel_headerIpfsNodeIconLabel)"
+  },
+  "panel_headerNewVersionTitle": {
+    "message": "Asystent IPFS został zaktualizowany do nowej wersji! Kliknij, aby poznać szczegóły.",
+    "description": "A label in the Browser Action pop-up for icon appearing on first load of new version (panel_headerNewVersionTitle)"
+  },
+  "panel_headerActiveToggleTitle": {
+    "message": "Włącz dostępne integracje IPFS",
+    "description": "A label for toggling all IPFS integrations (panel_headerActiveToggleTitle)"
+  },
+  "panel_statusOffline": {
+    "message": "niedostępne",
+    "description": "A label in Node status section of Browser Action pop-up (panel_statusOffline)"
+  },
+  "panel_statusGatewayAddress": {
+    "message": "Brama HTTP",
+    "description": "A label in Node status section of Browser Action pop-up (panel_statusGatewayAddress)"
+  },
+  "panel_statusGatewayAddressTitle": {
+    "message": "Adres URL bramy publicznej lub lokalnej, której używasz do pobierania zawartości (zmienisz go w Preferencjach)",
+    "description": "A label in Node status section of Browser Action pop-up (panel_statusGatewayAddressTitle)"
+  },
+  "panel_statusApiAddress": {
+    "message": "Zdalne wywołanie procedury",
+    "description": "A label in Node status section of Browser Action pop-up (panel_statusApiAddress)"
+  },
+  "panel_statusApiAddressTitle": {
+    "message": "Adres twojego lokalnego Kubo RPC",
+    "description": "A label in Node status section of Browser Action pop-up (panel_statusApiAddressTitle)"
+  },
+  "panel_kuboRpcBackendVersionTitle": {
+    "message": "Wersja backendu IPFS używana przez to rozszerzenie do komunikacji przez Kubo RPC API",
+    "description": "A label in Node status section of Browser Action pop-up (panel_kuboRpcBackendVersionTitle)"
+  },
+  "panel_statusSwarmPeers": {
+    "message": "Węzły",
+    "description": "A label in Node status section of Browser Action pop-up (panel_statusSwarmPeers)"
+  },
+  "panel_statusSwarmPeersTitle": {
+    "message": "Liczba węzłów IPFS umożliwiających połączenie",
+    "description": "A label tooltip in Node status section of Browser Action pop-up (panel_statusSwarmPeersTitle)"
+  },
+  "panel_quickImport": {
+    "message": "Import",
+    "description": "A menu item in Browser Action pop-up (panel_quickImport)"
+  },
+  "panel_quickImportTooltip": {
+    "message": "Importuj pliki do IPFS i skopiuj publicznie udostępniony link do schowka.",
+    "description": "A menu item tooltip in Browser Action pop-up (panel_quickImportTooltip)"
+  },
+  "panel_openWebui": {
+    "message": "Mój węzeł IPFS",
+    "description": "A menu item in Browser Action pop-up (panel_openWebui)"
+  },
+  "panel_openWebuiTooltip": {
+    "message": "Otwórz kontrolę węzła IPFS w swojej przeglądarce.",
+    "description": "A menu item in Browser Action pop-up (panel_openWebuiTooltip)"
+  },
+  "panel_openPreferences": {
+    "message": "Otwórz preferencje Asystenta IPFS",
+    "description": "A menu item in Browser Action pop-up (panel_openPreferences)"
+  },
+  "panel_activeTabSectionHeader": {
+    "message": "Aktywna strona",
+    "description": "A menu item in Browser Action pop-up (panel_activeTabSiteRedirectEnable)"
+  },
+  "panel_activeTabSiteIntegrationsToggle": {
+    "message": "Włącz dla $1",
+    "description": "A menu item in Browser Action pop-up (panel_activeTabSiteIntegrationsToggle)"
+  },
+  "panel_activeTabSiteIntegrationsToggleTooltip": {
+    "message": "Włączanie/wyłączanie wszystkich integracji IPFS dla $1",
+    "description": "A menu item tooltip in Browser Action pop-up (panel_activeTabSiteIntegrationsToggleTooltip)"
+  },
+  "panel_importCurrentIpfsAddress": {
+    "message": "Zaimportuj do plików w moim węźle",
+    "description": "A menu item in Browser Action pop-up (panel_importCurrentIpfsAddress)"
+  },
+  "panel_importCurrentIpfsAddressTooltip": {
+    "message": "Zaimportuj zawartość tej karty do plików, aby zachować trwałą kopię dla dostępu offline.",
+    "description": "A menu item tooltip in Browser Action pop-up (panel_importCurrentIpfsAddressTooltip)"
+  },
+  "panelCopy_currentIpnsAddress": {
+    "message": "Kopiuj ścieżkę IPNS",
+    "description": "A menu item in Browser Action pop-up and right-click context menu (panelCopy_currentIpnsAddress)"
+  },
+  "panelCopy_currentIpnsAddressTooltip": {
+    "message": "Użyj tej ścieżki z narzędziami IPFS i bramami, aby dotrzeć do najnowszej wersji tej karty.",
+    "description": "A menu item tooltip in Browser Action pop-up (panelCopy_currentIpnsAddressTooltip)"
+  },
+  "panelCopy_currentIpfsAddress": {
+    "message": "Skopiuj ścieżkę IPFS",
+    "description": "A menu item in Browser Action pop-up and right-click context menu (panelCopy_currentIpfsAddress)"
+  },
+  "panelCopy_currentIpfsAddressTooltip": {
+    "message": "Użyj tej ścieżki z narzędziami IPFS i bramami, aby dotrzeć do zawartości na linii czasu. Ta migawka nie zmieni się, nawet jeśli zawartość zostanie zaktualizowana. ",
+    "description": "A menu item tooltip in Browser Action pop-up (panelCopy_currentIpfsAddressTooltip)"
+  },
+  "panelCopy_copyRawCid": {
+    "message": "Skopiuj CID",
+    "description": "A menu item in Browser Action pop-up and right-click context menu (panelCopy_copyRawCid)"
+  },
+  "panelCopy_copyRawCidTooltip": {
+    "message": "Unikalny identyfikator zawartości IPFS dla tej karty w tym momencie. Jeśli zawartość zmieni się później, CID również ulegnie zmianie.",
+    "description": "A menu item tooltip in Browser Action pop-up (panelCopy_copyRawCidTooltip)"
+  },
+  "panelCopy_notReadyHint": {
+    "message": "(czekanie na dane DAG)",
+    "description": "A hint in menu item in Browser Action pop-up to indicate value is still being resolved (panelCopy_notReadyHint)"
+  },
+  "panel_copyCurrentPublicGwUrl": {
+    "message": "Skopiuj link do udostępnienia",
+    "description": "A menu item in Browser Action pop-up and right-click context menu (panel_copyCurrentPublicGwUrl)"
+  },
+  "panel_copyCurrentPublicGwUrlTooltip": {
+    "message": "",
+    "description": "A menu item tooltip in Browser Action pop-up (panel_copyCurrentPublicGwUrlTooltip)"
+  },
+  "panel_copyCurrentPermalink": {
+    "message": "Skopiuj link do migawki",
+    "description": "A menu item in Browser Action pop-up (panel_copyCurrentPermalink)"
+  },
+  "panel_copyCurrentPermalinkTooltip": {
+    "message": "",
+    "description": "A menu item tooltip in Browser Action pop-up (panel_copyCurrentPermalinkTooltip)"
+  },
+  "panel_contextMenuViewOnGateway": {
+    "message": "Wyświetl w bramie",
+    "description": "A menu item in Browser Action pop-up and right-click context menu (panel_contextMenuViewOnGateway)"
+  },
+  "pageAction_titleIpfsAtPublicGateway": {
+    "message": "Zasób IPFS pobrany z publicznej bramy",
+    "description": "A tooltip displayed over Page Action in location bar (pageAction_titleIpfsAtPublicGateway)"
+  },
+  "pageAction_titleIpfsAtCustomGateway": {
+    "message": "Zasób IPFS załadowany przez lokalną bramę",
+    "description": "A tooltip displayed over Page Action in location bar (pageAction_titleIpfsAtCustomGateway)"
+  },
+  "pageAction_titleNonIpfs": {
+    "message": "Zasób spoza IPFS",
+    "description": "Default label for icon hidden in Page Action menu (pageAction_titleNonIpfs)"
+  },
+  "contextMenu_parentImage": {
+    "message": "Wybrana grafika",
+    "description": "An item in right-click context menu (contextMenu_parentImage)"
+  },
+  "contextMenu_parentVideo": {
+    "message": "Wybrane wideo",
+    "description": "An item in right-click context menu (contextMenu_parentVideo)"
+  },
+  "contextMenu_parentAudio": {
+    "message": "Wybrany plik audio",
+    "description": "An item in right-click context menu (contextMenu_parentAudio)"
+  },
+  "contextMenu_parentLink": {
+    "message": "Podlinkowany plik",
+    "description": "An item in right-click context menu (contextMenu_parentLink)"
+  },
+  "contextMenu_parentText": {
+    "message": "Zaznaczony tekst",
+    "description": "An item in right-click context menu (contextMenu_parentText)"
+  },
+  "contextMenu_parentPage": {
+    "message": "Ten dokument HTML",
+    "description": "An item in right-click context menu (contextMenu_parentPage)"
+  },
+  "contextMenu_importToIpfs": {
+    "message": "Importuj do IPFS",
+    "description": "An item in right-click context menu (contextMenu_importToIpfs)"
+  },
+  "contextMenu_importToIpfsSelection": {
+    "message": "Importuj zaznaczony tekst do IPFS",
+    "description": "An item in right-click context menu (contextMenu_importToIpfsSelection)"
+  },
+  "notify_addonIssueTitle": {
+    "message": "Problem z Asystentem IPFS",
+    "description": "A title of system notification (notify_addonIssueTitle)"
+  },
+  "notify_addonIssueMsg": {
+    "message": "Zobacz konsolę dewelopera swojej przeglądarki, aby uzyskać więcej szczegółów",
+    "description": "A message in system notification (notify_addonIssueMsg)"
+  },
+  "notify_copiedTitle": {
+    "message": "Skopiowano",
+    "description": "A title of system notification (notify_copiedTitle)"
+  },
+  "notify_fileCpImportErrorTitle": {
+    "message": "Błąd podczas importowania zasobu IPFS",
+    "description": "A title of system notification (notify_fileCpImportErrorTitle)"
+  },
+  "notify_importErrorTitle": {
+    "message": "Nie ma możliwości zaimportowania przez Kubo RPC",
+    "description": "A title of system notification (notify_importErrorTitle)"
+  },
+  "notify_importTrackingProtectionErrorMsg": {
+    "message": "Spróbuj wyłączyć \"Ochronę przed śledzeniem\" (wciśnij ctrl+shift+j po więcej szczegółów)",
+    "description": "(notify_importTrackingProtectionErrorMsg)"
+  },
+  "notify_inlineMsg": {
+    "message": "$1",
+    "description": "A generic placeholder for notification message, leave as-is (notify_inlineMsg)"
+  },
+  "notify_inlineErrorMsg": {
+    "message": "$1 (wciśnij ctrl+shift+j po więcej informacji)",
+    "description": "A generic placeholder for error notification (notify_inlineErrorMsg)"
+  },
+  "notify_startIpfsNodeErrorTitle": {
+    "message": "Nie udało się uruchomić węzła IPFS",
+    "description": "System notification title displayed when starting an IPFS node fails (notify_startIpfsNodeErrorTitle)"
+  },
+  "notify_stopIpfsNodeErrorTitle": {
+    "message": "Nie udało się zatrzymać węzła IPFS",
+    "description": "System notification title displayed when stopping an IPFS node fails (notify_stopIpfsNodeErrorTitle)"
+  },
+  "option_page_title": {
+    "message": "Preferencje | Asystent IPFS",
+    "description": "Title of the Preferences page (option_page_title)"
+  },
+  "option_page_header": {
+    "message": "Preferencje Asystenta",
+    "description": "Main header on the Preferences screen (option_page_header)"
+  },
+  "option_legend_readMore": {
+    "message": "Dowiedz się więcej",
+    "description": "A generic link in option description on the Preferences screen (option_legend_readMore)"
+  },
+  "option_header_nodeType": {
+    "message": "Węzeł IPFS",
+    "description": "A section header on the Preferences screen (option_header_nodeType)"
+  },
+  "option_header_fileImport": {
+    "message": "Import pliku",
+    "description": "A section header on the Preferences screen (option_header_fileImport)"
+  },
+  "option_ipfsNodeType_title": {
+    "message": "Typ węzła IPFS",
+    "description": "An option title on the Preferences screen (option_ipfsNodeType_title)"
+  },
+  "option_ipfsNodeType_external_description": {
+    "message": "Ustaw na \"Zdalny (Kubo RPC)\", aby połączyć się z lokalnym węzłem za pomocą Kubo RPC API.",
+    "description": "An option description on the Preferences screen (option_ipfsNodeType_external_description)"
+  },
+  "option_ipfsNodeType_brave_description": {
+    "message": "Ustaw na \"Dostarczane przez Brave\", aby wykorzystać natywną obsługę IPFS w przeglądarce Brave.",
+    "description": "An option description on the Preferences screen (option_ipfsNodeType_brave_description)"
+  },
+  "option_ipfsNodeConfig_title": {
+    "message": "Konfiguracja węzła IPFS",
+    "description": "An option title on the Preferences screen (option_ipfsNodeConfig_title)"
+  },
+  "option_ipfsNodeType_external": {
+    "message": "Zdalny (Kubo RPC)",
+    "description": "An option on the Preferences screen (option_ipfsNodeType_external)"
+  },
+  "option_ipfsNodeType_external_explainer": {
+    "message": "",
+    "description": "Explainer under the IPFS Node section on the Preferences screen (option_ipfsNodeType_external_explainer)"
+  },
+  "option_ipfsNodeType_external_installKubo": {
+    "message": "",
+    "description": "Link under the IPFS Node section on the Preferences screen (option_ipfsNodeType_external_installKubo)"
+  },
+  "option_ipfsNodeType_external_installDesktop": {
+    "message": "",
+    "description": "Link under the IPFS Node section on the Preferences screen (option_ipfsNodeType_external_installDesktop)"
+  },
+  "option_ipfsNodeType_external_rpcDocs": {
+    "message": "",
+    "description": "Link under the IPFS Node section on the Preferences screen (option_ipfsNodeType_external_rpcDocs)"
+  },
+  "option_ipfsNodeType_brave": {
+    "message": "Dostarczone przez Brave",
+    "description": "An option on the Preferences screen (option_ipfsNodeType_brave)"
+  },
+  "option_hint_url": {
+    "message": "Wpisz adres URL bez żadnej podścieżki",
+    "description": "An option description on the Preferences screen (option_hint_url)"
+  },
+  "option_hint_readonly": {
+    "message": "Ta wartość jest tylko do odczytu",
+    "description": "An option description on the Preferences screen (option_hint_readonly)"
+  },
+  "option_header_gateways": {
+    "message": "Bramy",
+    "description": "A section header on the Preferences screen (option_header_gateways)"
+  },
+  "option_gateways_sectionIntro": {
+    "message": "",
+    "description": "A short intro under the Gateways section header on the Preferences screen (option_gateways_sectionIntro)"
+  },
+  "option_customGatewayUrl_title": {
+    "message": "Lokalna brama",
+    "description": "An option title on the Preferences screen (option_customGatewayUrl_title)"
+  },
+  "option_customGatewayUrl_description": {
+    "message": "Ustaw adres URL lokalnej bramy.",
+    "description": "An option description on the Preferences screen (option_customGatewayUrl_description)"
+  },
+  "option_customGatewayUrl_warning": {
+    "message": "Zasoby IPFS zostaną zablokowane na stronach z HTTPS jeśli URL bramy nie rozpoczyna się od „http://127.0.0.1”, „http://[::1]” lub „https://”",
+    "description": "A warning on the Preferences screen, displayed when URL does not belong to Secure Context (option_customGatewayUrl_warning)"
+  },
+  "option_useCustomGateway_title": {
+    "message": "Używaj lokalnej bramy",
+    "description": "An option title on the Preferences screen (option_useCustomGateway_title)"
+  },
+  "option_useCustomGateway_description": {
+    "message": "Przekieruj żądania zasobów IPFS do swojej lokalnej bramy.",
+    "description": "An option description on the Preferences screen (option_useCustomGateway_description)"
+  },
+  "option_useSubdomains_title": {
+    "message": "Użyj subdomen",
+    "description": "An option title on the Preferences screen (option_useSubdomains_title)"
+  },
+  "option_useSubdomains_description": {
+    "message": "",
+    "description": "An option description on the Preferences screen (option_useSubdomains_description)"
+  },
+  "option_useSubdomains_warning": {
+    "message": "",
+    "description": "A warning on the Preferences screen, displayed when subdomain isolation is disabled (option_useSubdomains_warning)"
+  },
+  "option_redirectSubresources_title": {
+    "message": "",
+    "description": "An option title on the Preferences screen (option_redirectSubresources_title)"
+  },
+  "option_redirectSubresources_description": {
+    "message": "",
+    "description": "An option description on the Preferences screen (option_redirectSubresources_description)"
+  },
+  "option_redirectSubresources_warning": {
+    "message": "",
+    "description": "A warning on the Preferences screen, displayed when subresource redirects are enabled (option_redirectSubresources_warning)"
+  },
+  "option_dnslinkLookup_title": {
+    "message": "",
+    "description": "An option title on the Preferences screen (option_dnslinkLookup_title)"
+  },
+  "option_dnslinkLookup_description": {
+    "message": "",
+    "description": "An option description on the Preferences screen (option_dnslinkLookup_description)"
+  },
+  "option_dnslinkRedirect_title": {
+    "message": "",
+    "description": "An option title on the Preferences screen (option_dnslinkRedirect_title)"
+  },
+  "option_dnslinkRedirect_description": {
+    "message": "",
+    "description": "An option description on the Preferences screen (option_dnslinkRedirect_description)"
+  },
+  "option_dnslinkRedirect_warning": {
+    "message": "Nie używaj, jeśli Twój węzeł IPFS nie obsługuje *.ipfs.localhost. Przekierowanie na bramę opartą na ścieżce łamie izolację bezpieczeństwa stron DNSLink opartą na pochodzeniu, więc upewnij się, że rozumiesz związane z tym ryzyko.",
+    "description": "A warning on the Preferences screen, displayed when URL does not belong to Secure Context (option_customGatewayUrl_warning)"
+  },
+  "option_disabledOn_title": {
+    "message": "Zawsze wyłączaj integracje IPFS",
+    "description": "An option title on the Preferences screen (option_disabledOn_title)"
+  },
+  "option_disabledOn_description": {
+    "message": "Strony z tej listy (jedna nazwa hosta w wierszu) będą zawsze ładowane z wyłączoną integracją IPFS. Przełączenie \"Włącz na ...\" z menu akcji przeglądarki podczas odwiedzania strony również doda lub usunie ją z tej listy.",
+    "description": "An option description on the Preferences screen (option_disabledOn_description)"
+  },
+  "option_enabledOn_title": {
+    "message": "Zawsze włączaj integracje IPFS",
+    "description": "An option title on the Preferences screen (option_enabledOn_title)"
+  },
+  "option_enabledOn_description": {
+    "message": "Strony z tej listy (jedna nazwa hosta w wierszu) będą zawsze ładowane z włączoną integracją IPFS. Przełączenie \"Włącz na ...\" z menu akcji przeglądarki podczas odwiedzania strony również doda lub usunie ją z tej listy.",
+    "description": "An option description on the Preferences screen (option_enabledOn_description)"
+  },
+  "option_publicGatewayUrl_title": {
+    "message": "",
+    "description": "An option title on the Preferences screen (option_publicGatewayUrl_title)"
+  },
+  "option_publicGatewayUrl_description": {
+    "message": "",
+    "description": "An option description on the Preferences screen (option_publicGatewayUrl_description)"
+  },
+  "option_publicSubdomainGatewayUrl_title": {
+    "message": "",
+    "description": "An option title on the Preferences screen (option_publicSubdomainGatewayUrl_title)"
+  },
+  "option_publicSubdomainGatewayUrl_description": {
+    "message": "",
+    "description": "An option description on the Preferences screen (option_publicSubdomainGatewayUrl_description)"
+  },
+  "option_usePublicGatewaysForShare_title": {
+    "message": "",
+    "description": "An option title on the Preferences screen (option_usePublicGatewaysForShare_title)"
+  },
+  "option_usePublicGatewaysForShare_description": {
+    "message": "",
+    "description": "An option description on the Preferences screen (option_usePublicGatewaysForShare_description)"
+  },
+  "option_header_api": {
+    "message": "Kubo RPC API",
+    "description": "A section header on the Preferences screen (option_header_api)"
+  },
+  "option_api_sectionIntro": {
+    "message": "",
+    "description": "A short intro under the Kubo RPC API section header on the Preferences screen (option_api_sectionIntro)"
+  },
+  "option_ipfsApiUrl_title": {
+    "message": "URL Kubo RPC",
+    "description": "An option title on the Preferences screen (option_ipfsApiUrl_title)"
+  },
+  "option_ipfsApiUrl_description": {
+    "message": "Ustaw adres URL swojego Kubo RPC. (Wskazówka: pod tym adresem znajduje się https://docs.ipfs.tech/reference/kubo/rpc/.)",
+    "description": "An option description on the Preferences screen (option_ipfsApiUrl_description)"
+  },
+  "option_ipfsApiPollForegroundSeconds_title": {
+    "message": "",
+    "description": "An option title on the Preferences screen (option_ipfsApiPollForegroundSeconds_title)"
+  },
+  "option_ipfsApiPollForegroundSeconds_description": {
+    "message": "",
+    "description": "An option description on the Preferences screen (option_ipfsApiPollForegroundSeconds_description)"
+  },
+  "option_ipfsApiPollBackgroundSeconds_title": {
+    "message": "",
+    "description": "An option title on the Preferences screen (option_ipfsApiPollBackgroundSeconds_title)"
+  },
+  "option_ipfsApiPollBackgroundSeconds_description": {
+    "message": "",
+    "description": "An option description on the Preferences screen (option_ipfsApiPollBackgroundSeconds_description)"
+  },
+  "option_automaticMode_title": {
+    "message": "Używaj trybu automatycznego",
+    "description": "An option title on the Preferences screen (option_automaticMode_title)"
+  },
+  "option_automaticMode_description": {
+    "message": "",
+    "description": "An option description on the Preferences screen (option_automaticMode_description)"
+  },
+  "option_automaticMode_description_subtext": {
+    "message": "",
+    "description": "An automatic mode option description on the Preferences screen (option_automaticMode_description_subtext)"
+  },
+  "option_header_dnslink": {
+    "message": "DNSLink",
+    "description": "A section header on the Preferences screen (option_header_dnslink)"
+  },
+  "option_dnslink_sectionIntro": {
+    "message": "",
+    "description": "A short intro under the DNSLink section header on the Preferences screen (option_dnslink_sectionIntro)"
+  },
+  "option_header_experiments": {
+    "message": "Eksperymenty",
+    "description": "A section header on the Preferences screen (option_header_experiments)"
+  },
+  "option_header_redirect_rules": {
+    "message": "Zasady przekierowania",
+    "description": "A section header on the Preferences screen (option_header_redirect_rules)"
+  },
+  "option_header_reset": {
+    "message": "Resetuj ustawienia",
+    "description": "A section header on the Preferences screen (option_header_reset)"
+  },
+  "option_experimental": {
+    "message": "eksperyment",
+    "description": "Warning label added to experimental options on the Preferences screen (option_experimental)"
+  },
+  "option_deprecated": {
+    "message": "przestarzały",
+    "description": "Warning label added to deprecated options on the Preferences screen (option_deprecated)"
+  },
+  "option_experiments_warning": {
+    "message": "Ostrzeżenie! Te eksperymentalne funkcje są w trakcie opracowywania i mogą ulec zmianie pod względem dostępności i funkcjonalności.",
+    "description": "Warning about Experiments section on the Preferences screen (option_experiments_warning)"
+  },
+  "option_useLatestWebUI_title": {
+    "message": "Użyj najnowszej wersji IPFS Web UI",
+    "description": "An option title on the Preferences screen (option_useLatestWebUI_title)"
+  },
+  "option_useLatestWebUI_description": {
+    "message": "Używaj najnowszych wersji Status, Pliki, Eksploruj, Peers i Ustawienia z webui.ipfs.io (przez DNSLink) zamiast twardo zakodowanych CID dostarczonych z procesem IPFS. (Włączaj tylko jeśli ufasz swojemu dostawcy DNS i wiesz jak skonfigurować wymagane nagłówki CORS).",
+    "description": "An option description on the Preferences screen (option_useLatestWebUI_description)"
+  },
+  "option_displayNotifications_title": {
+    "message": "Włącz powiadomienia",
+    "description": "An option title on the Preferences screen (option_displayNotifications_title)"
+  },
+  "option_displayNotifications_description": {
+    "message": "",
+    "description": "An option description on the Preferences screen (option_displayNotifications_description)"
+  },
+  "option_displayReleaseNotes_title": {
+    "message": "Pokaż informacje o wydaniu przy aktualizacji",
+    "description": "An option title on the Preferences screen (option_displayReleaseNotes_title)"
+  },
+  "option_displayReleaseNotes_description": {
+    "message": "Otwórz informacje o wydaniu w nowej karcie, gdy zainstalowana zostanie nowa wersja Asystenta IPFS. ",
+    "description": "An option description on the Preferences screen (option_displayReleaseNotes_description)"
+  },
+  "option_catchUnhandledProtocols_title": {
+    "message": "Przechwytuj nieobsłużone protokoły IPFS",
+    "description": "An option title on the Preferences screen (option_catchUnhandledProtocols_title)"
+  },
+  "option_catchUnhandledProtocols_description": {
+    "message": "Włącz tymczasową obsługę żądań ipfs://, ipns:// oraz dweb: poprzez przekierowanie ich do bramy HTTP.",
+    "description": "An option description on the Preferences screen (option_catchUnhandledProtocols_description)"
+  },
+  "option_linkify_title": {
+    "message": "\"Linkifikacja\" adresów IPFS",
+    "description": "An option title on the Preferences screen (option_linkify_title)"
+  },
+  "option_linkify_description": {
+    "message": "Zamienia ścieżki /ipfs/ wyświetlane jako zwykły tekst na stronach internetowych w klikalne linki.",
+    "description": "An option description on the Preferences screen (option_linkify_description)"
+  },
+  "option_recoverFailedHttpRequests_title": {
+    "message": "Naprawiaj nieudane zapytania HTTP",
+    "description": "An option title on the Preferences screen (option_recoverFailedHttpRequests_title)"
+  },
+  "option_recoverFailedHttpRequests_description": {
+    "message": "",
+    "description": "An option description on the Preferences screen (option_recoverFailedHttpRequests_description)"
+  },
+  "option_redirectToXIpfsPathValue_title": {
+    "message": "",
+    "description": "An option title on the Preferences screen (option_redirectToXIpfsPathValue_title)"
+  },
+  "option_redirectToXIpfsPathValue_description": {
+    "message": "",
+    "description": "An option description on the Preferences screen (option_redirectToXIpfsPathValue_description)"
+  },
+  "option_redirectToXIpfsPathValue_warning": {
+    "message": "",
+    "description": "A warning on the Preferences screen, displayed when redirect to x-ipfs-path value is enabled (option_redirectToXIpfsPathValue_warning)"
+  },
+  "option_honorRedirectOptOutHint_title": {
+    "message": "",
+    "description": "An option title on the Preferences screen (option_honorRedirectOptOutHint_title)"
+  },
+  "option_honorRedirectOptOutHint_description": {
+    "message": "",
+    "description": "An option description on the Preferences screen (option_honorRedirectOptOutHint_description)"
+  },
+  "option_openViaWebUI_title": {
+    "message": "Otwieranie zaimportowanych plików na ekranie Plików",
+    "description": "An option title on the Preferences screen (option_openViaWebUI_title)"
+  },
+  "option_openViaWebUI_description": {
+    "message": "Po zaimportowaniu pliku otwórz go na ekranie Pliki, zamiast otwierać go lub jego katalog nadrzędny w bramie.",
+    "description": "An option description on the Preferences screen (option_openViaWebUI_description)"
+  },
+  "option_preloadAtPublicGateway_title": {
+    "message": "Wstępne ładowanie zaimportowanych zasobów",
+    "description": "An option title on the Preferences screen (option_preloadAtPublicGateway_title)"
+  },
+  "option_preloadAtPublicGateway_description": {
+    "message": "Automatyczne wstępne ładowanie zasobów zaimportowanych do IPFS poprzez asynchroniczne żądania HTTP HEAD do publicznej bramy.",
+    "description": "An option description on the Preferences screen (option_preloadAtPublicGateway_description)"
+  },
+  "option_redirect_rules_reset_all": {
+    "message": "Zresetuj wszystkie zasady przekierowania",
+    "description": "A button label on the Preferences screen (option_redirect_rules_reset_all)"
+  },
+  "option_redirect_rules_row_origin": {
+    "message": "Źródło",
+    "description": "A table header on the Preferences screen (option_redirect_rules_row_origin)"
+  },
+  "option_redirect_rules_row_target": {
+    "message": "Cel",
+    "description": "A table header on the Preferences screen (option_redirect_rules_row_target)"
+  },
+  "option_logNamespaces_title": {
+    "message": "Zakres logowania",
+    "description": "An option title for tweaking log level (option_logNamespaces_title)"
+  },
+  "option_logNamespaces_description": {
+    "message": "Przestrzenie nazw z tej listy (oddzielone przecinkami) będą zapisywane w konsoli przeglądarki.",
+    "description": "An option description for the log level (option_logNamespaces_description)"
+  },
+  "option_importDir_title": {
+    "message": "Katalog importu plików",
+    "description": "An option title on the Preferences screen (option_importDir_title)"
+  },
+  "option_importDir_description": {
+    "message": "Ustaw katalog, który ma być używany dla plików importowanych za pomocą Asystenta IPFS.",
+    "description": "An option description on the Preferences screen (option_importDir_description)"
+  },
+  "option_resetAllOptions_title": {
+    "message": "Resetuj wszystko",
+    "description": "An option title and button label on the Preferences screen (option_resetAllOptions_title)"
+  },
+  "option_resetAllOptions_description": {
+    "message": "Przywrócenie domyślnych wartości dla wszystkich ustawień Asystenta IPFS. Ostrzeżenie: Tego nie można cofnąć!",
+    "description": "An option description on the Preferences screen (option_resetAllOptions_description)"
+  },
+  "manifest_extensionName": {
+    "message": "Asystent IPFS",
+    "description": "Extension name in the Manifest file (manifest_extensionName)"
+  },
+  "manifest_shortExtensionName": {
+    "message": "Asystent IPFS",
+    "description": "Short extension name in the Manifest file (manifest_shortExtensionName)"
+  },
+  "manifest_extensionDescription": {
+    "message": "Wykorzystaj możliwości IPFS w swojej przeglądarce",
+    "description": "Extension description in the Manifest file (manifest_extensionDescription)"
+  },
+  "quickImport_page_title": {
+    "message": "Importuj i udostępniaj pliki | Asystent IPFS",
+    "description": "Page title (quickImport_page_title)"
+  },
+  "quickImport_head_peers": {
+    "message": "Importuj i udostępniaj pliki",
+    "description": "Header on the share files page (quickImport_subhead_peers)"
+  },
+  "quickImport_subhead_peers": {
+    "message": "Połączono z $1 węzłami",
+    "description": "Partial info stats beneath the header on the share files page (quickImport_subhead_peers)"
+  },
+  "quickImport_pick_file_button": {
+    "message": "Wybierz plik",
+    "description": "Text on the 'pick a file' button (quickImport_pick_file_button)"
+  },
+  "quickImport_pick_folder_button": {
+    "message": "",
+    "description": "Text on the 'pick a folder' button that keeps directory structure (quickImport_pick_folder_button)"
+  },
+  "quickImport_or": {
+    "message": "lub",
+    "description": "seperates the pick a file button from the drop message (quickImport_or)"
+  },
+  "quickImport_drop_it_here": {
+    "message": "upuść tutaj",
+    "description": "Drop message on the share files page (quickImport_drop_it_here)"
+  },
+  "quickImport_state_importing": {
+    "message": "Importowanie w trakcie...",
+    "description": "Status label on the share files page (quickImport_state_importing)"
+  },
+  "quickImport_state_buffering": {
+    "message": "(buforowanie, proszę czekać)",
+    "description": "Status label on the share files page (quickImport_state_buffering)"
+  },
+  "quickImport_options_show": {
+    "message": "opcje importu",
+    "description": "Button on the share files page (quickImport_options_show)"
+  },
+  "quickImport_options_importDir": {
+    "message": "Ścieżka przechowywania importowanych plików",
+    "description": "Textbox label on the share files page (quickImport_options_importDir)"
+  },
+  "quickImport_options_openViaWebUI": {
+    "message": "Otwórz na stronie Plików",
+    "description": "Checkbox label on the share files page (quickImport_options_openViaWebUI)"
+  },
+  "page_landingWelcome_title": {
+    "message": "Witaj | Asystent IPFS",
+    "description": "Page title (page_landingWelcome_title)"
+  },
+  "page_landingWelcome_logo_title": {
+    "message": "Asystent IPFS",
+    "description": "Extension name after the IPFS logo (page_landingWelcome_logo_title)"
+  },
+  "page_landingWelcome_welcome_peers": {
+    "message": "Twój węzeł jest połączony z <0>$1</0> innymi węzłami",
+    "description": "Ready message copy (page_landingWelcome_welcome_peers)"
+  },
+  "page_landingWelcome_welcome_statusButton_text": {
+    "message": "Status",
+    "description": "Ready message button text for opening Web UI status page (page_landingWelcome_welcome_statusButton_text)"
+  },
+  "page_landingWelcome_welcome_filesButton_text": {
+    "message": "Pliki",
+    "description": "Ready message button text for opening Web UI files page (page_landingWelcome_welcome_filesButton_text)"
+  },
+  "page_landingWelcome_welcome_peersButton_text": {
+    "message": "Węzły",
+    "description": "Ready message button text for opening Web UI files page (page_landingWelcome_welcome_peersButton_text)"
+  },
+  "page_landingWelcome_installSteps_notRunning_title": {
+    "message": "Kubo nie jest uruchomiony",
+    "description": "Install steps title (page_landingWelcome_installSteps_notRunning_title)"
+  },
+  "page_landingWelcome_installSteps_brave_title": {
+    "message": "Użytkownicy Brave",
+    "description": "Install steps title (page_landingWelcome_installSteps_brave_title)"
+  },
+  "page_landingWelcome_installSteps_brave_install": {
+    "message": "Możesz uruchomić IPFS bezpośrednio w przeglądarce, bez IPFS Desktop ani wiersza poleceń. Otwórz <0>Preferencje Asystenta</0> i ustaw typ węzła IPFS na \"Dostarczane przez Brave\".",
+    "description": "Install steps copy (page_landingWelcome_installSteps_brave_install)"
+  },
+  "page_landingWelcome_installSteps_desktop_title": {
+    "message": "Użytkownicy IPFS Desktop",
+    "description": "Install steps title (page_landingWelcome_installSteps_desktop_title)"
+  },
+  "page_landingWelcome_installSteps_desktop_install": {
+    "message": "Upewnij się, że IPFS Desktop jest uruchomiony. Nie masz go zainstalowanego? <0>Pobierz IPFS Desktop teraz.</0>",
+    "description": "Install steps copy (page_landingWelcome_installSteps_desktop_install)"
+  },
+  "page_landingWelcome_installSteps_cli_title": {
+    "message": "Użytkownicy wiersza poleceń",
+    "description": "Install steps title (page_landingWelcome_installSteps_cli_title)"
+  },
+  "page_landingWelcome_installSteps_cli_install": {
+    "message": "Uruchom IPFS wpisując <code class=\"yellow\">ipfs daemon</code> w swoim terminalu. Jeśli nie masz jeszcze zainstalowanego IPFS, skorzystaj najpierw z <0>przewodnika szybkiego startu CLI.</0>",
+    "description": "Install steps copy (page_landingWelcome_installSteps_cli_install)"
+  },
+  "page_landingWelcome_resources_title_new_ipfs": {
+    "message": "Dowiedz się więcej o IPFS",
+    "description": "Resources title (page_landingWelcome_resources_title_new_ipfs)"
+  },
+  "page_landingWelcome_resources_new_ipfs_companion_features": {
+    "message": "Przeczytaj o <0>funkcjach Asystenta IPFS</0>",
+    "description": "Resources copy (page_landingWelcome_resources_new_ipfs_companion_features)"
+  },
+  "page_landingWelcome_resources_new_ipfs_concepts": {
+    "message": "Poznaj podstawowe pojęcia w przewodniku <0>Jak działa IPFS</0>",
+    "description": "Resources copy (page_landingWelcome_resources_new_ipfs_concepts)"
+  },
+  "page_landingWelcome_resources_new_ipfs_docs": {
+    "message": "Odwiedź <0>stronę dokumentacji</0>, aby dowiedzieć się więcej",
+    "description": "Resources copy (page_landingWelcome_resources_new_ipfs_docs)"
+  },
+  "page_landingWelcome_resources_new_ipfs_specs": {
+    "message": "Poznaj <0>specyfikacje protokołu</0> dla szczegółów technicznych",
+    "description": "Resources copy (page_landingWelcome_resources_new_ipfs_specs)"
+  },
+  "page_landingWelcome_resources_title_build": {
+    "message": "Buduj na IPFS",
+    "description": "Resources title (page_landingWelcome_resources_title_build)"
+  },
+  "page_landingWelcome_resources_build_tutorials": {
+    "message": "Znajdź <0>poradniki i tutoriale</0>, które pomogą Ci zacząć.",
+    "description": "Resources copy (page_landingWelcome_resources_build_tutorials)"
+  },
+  "page_landingWelcome_resources_build_examples": {
+    "message": "Zobacz, jakie <0>niesamowite rzeczy</0> inni budują z IPFS",
+    "description": "Resources copy (page_landingWelcome_resources_build_examples)"
+  },
+  "page_landingWelcome_resources_title_get_help": {
+    "message": "Uzyskaj pomoc",
+    "description": "Resources title (page_landingWelcome_resources_title_get_help)"
+  },
+  "page_landingWelcome_resources_get_help": {
+    "message": "Uzyskaj pomoc od społeczności na <0>forum wsparcia</0>",
+    "description": "Resources copy (page_landingWelcome_resources_get_help)"
+  },
+  "page_landingWelcome_resources_title_community": {
+    "message": "Dołącz do społeczności",
+    "description": "Community title (page_landingWelcome_resources_title_community)"
+  },
+  "page_landingWelcome_resources_community_forums": {
+    "message": "Dyskutuj na <0>forach społeczności</0>",
+    "description": "Community copy (page_landingWelcome_resources_community_forums)"
+  },
+  "page_landingWelcome_resources_community_contribute": {
+    "message": "<0>Wnieś swój wkład</0> w postaci kodu, dokumentacji i nie tylko",
+    "description": "Community copy (page_landingWelcome_resources_community_contribute)"
+  },
+  "page_landingWelcome_resources_community_translate": {
+    "message": "<0>Przetłumacz IPFS</0> na swój ulubiony język",
+    "description": "Community copy (page_landingWelcome_resources_community_translate)"
+  },
+  "page_landingWelcome_resources_community_resources": {
+    "message": "Odkryj wszystkie <0>zasoby społeczności IPFS</0>",
+    "description": "Community copy (page_landingWelcome_resources_community_resources)"
+  },
+  "page_landingWelcome_videos_why_ipfs": {
+    "message": "Dlaczego IPFS?",
+    "description": "Videos section title (page_landingWelcome_videos_why_ipfs)"
+  },
+  "page_landingWelcome_videos_how_ipfs_works": {
+    "message": "Jak działa IPFS",
+    "description": "Videos section title (page_landingWelcome_videos_how_ipfs_works)"
+  },
+  "page_landingWelcome_projects_title": {
+    "message": "Zbudowany z",
+    "description": "Projects section title (page_landingWelcome_projects_title)"
+  },
+  "recovery_page_title": {
+    "message": "Problem z węzłem IPFS | IPFS Companion",
+    "description": "Title of the recovery page (recovery_page_title)"
+  },
+  "recovery_page_sub_header": {
+    "message": "Nie udało się dotrzeć do twojego węzła IPFS :(",
+    "description": "Sub-Header on the recovery screen (recovery_page_sub_header)"
+  },
+  "recovery_page_message_p1": {
+    "message": "Upewnij się, że twój węzeł IPFS działa i udostępnia bramę HTTP.",
+    "description": "Message Para-1 on the recovery screen (recovery_page_message_p1)"
+  },
+  "recovery_page_message_p2": {
+    "message": "Możesz również uzyskać dostęp do zdeserializowanej wersji żądanego zasobu poprzez preferowaną publiczną bramę ustawioną w IPFS Companion. To przekazuje zaufanie do adresu strony trzeciej poniżej i pomija lokalną walidację hash.",
+    "description": "Message Para-2 on the recovery screen (recovery_page_message_p2)"
+  },
+  "recovery_page_button": {
+    "message": "Kontynuuj do bramy publicznej",
+    "description": "Button on the recovery screen (recovery_page_button)"
+  },
+  "recovery_page_learn_more": {
+    "message": "Dowiedz się więcej o bramach publicznych",
+    "description": "Learn more link on the recovery screen (recovery_page_learn_more)"
+  },
+  "recovery_page_update_preferences": {
+    "message": "Aktualizuj swoje ustawienia IPFS Companion",
+    "description": "Learn more link on the recovery screen (recovery_page_learn_more)"
+  },
+  "recovery_page_publicUrl": {
+    "message": "",
+    "description": "Label before the public gateway URL on the recovery screen (recovery_page_publicUrl)"
+  },
+  "recovery_page_nativeUrl": {
+    "message": "",
+    "description": "Label before the native ipfs:// address on the recovery screen, shown when no public gateway is set (recovery_page_nativeUrl)"
+  },
+  "recovery_page_message_p2_native": {
+    "message": "",
+    "description": "Message on the recovery screen shown when no public gateway is set (recovery_page_message_p2_native)"
+  },
+  "recovery_page_button_installDesktop": {
+    "message": "",
+    "description": "Button on the recovery screen shown when no public gateway is set (recovery_page_button_installDesktop)"
+  },
+  "request_permissions_page_title": {
+    "message": "Ustaw uprawnienia dla hosta | IPFS Companion",
+    "description": "Title of the recovery page (recovery_page_title)"
+  },
+  "request_permissions_page_sub_header": {
+    "message": "Jeszcze tylko ostatnia rzecz i wszystko gotowe! :)",
+    "description": "Sub-Header on the recovery screen (recovery_page_sub_header)"
+  },
+  "request_permissions_page_message_p1": {
+    "message": "IPFS Companion potrzebuje uprawnień, aby zidentyfikować zasoby IPFS w Internecie.",
+    "description": "Message Para-1 on the recovery screen (recovery_page_message_p1)"
+  },
+  "request_permissions_page_message_p2": {
+    "message": "IPFS Companion potrzebuje uprawnień hosta, aby uzyskać dostęp do wszystkich stron internetowych. Dzięki temu może monitorować wszystkie żądania sieciowe, identyfikować zasoby IPFS i wczytywać je za pomocą Twojego lokalnego węzła IPFS. Kliknij przycisk poniżej, aby nadać te uprawnienia.",
+    "description": "Message Para-2 on the recovery screen (recovery_page_message_p2)"
+  },
+  "request_permissions_page_button": {
+    "message": "Nadaj uprawnienia",
+    "description": "Button on the recovery screen (recovery_page_button)"
+  },
+  "request_permissions_page_learn_more": {
+    "message": "Dowiedz się więcej o uprawnieniach hosta",
+    "description": "Learn more link on the recovery screen (recovery_page_learn_more)"
+  },
+  "invalid_address_page_title": {
+    "message": "",
+    "description": "Title of the invalid address page (invalid_address_page_title)"
+  },
+  "invalid_address_page_sub_header": {
+    "message": "",
+    "description": "Sub-header on the invalid address page (invalid_address_page_sub_header)"
+  },
+  "invalid_address_page_opened_label": {
+    "message": "",
+    "description": "Label above the address the user requested (invalid_address_page_opened_label)"
+  },
+  "invalid_address_page_correct_label": {
+    "message": "",
+    "description": "Label above the corrected address (invalid_address_page_correct_label)"
+  },
+  "invalid_address_page_button": {
+    "message": "",
+    "description": "Button that opens the corrected address, $1 is the corrected address (invalid_address_page_button)"
+  },
+  "invalid_address_page_learn_more": {
+    "message": "",
+    "description": "Learn more link on the invalid address page (invalid_address_page_learn_more)"
+  },
+  "invalid_address_page_wrong_namespace_header": {
+    "message": "",
+    "description": "Header shown when ipfs:// was used for a mutable pointer (invalid_address_page_wrong_namespace_header)"
+  },
+  "invalid_address_page_dnslink_message": {
+    "message": "",
+    "description": "Explanation for a DNSLink domain used with ipfs:// (invalid_address_page_dnslink_message)"
+  },
+  "invalid_address_page_ipns_key_message": {
+    "message": "",
+    "description": "Explanation for an IPNS key used with ipfs:// (invalid_address_page_ipns_key_message)"
+  },
+  "invalid_address_page_namespace_advice": {
+    "message": "",
+    "description": "Shared advice about what ipfs:// is for (invalid_address_page_namespace_advice)"
+  },
+  "invalid_address_page_lowercased_header": {
+    "message": "",
+    "description": "Header shown when the browser lowercased a CIDv0 (invalid_address_page_lowercased_header)"
+  },
+  "invalid_address_page_lowercased_message": {
+    "message": "",
+    "description": "Explanation of a lowercased CIDv0 (invalid_address_page_lowercased_message)"
+  },
+  "invalid_address_page_lowercased_advice": {
+    "message": "",
+    "description": "What to do about a lowercased CIDv0 (invalid_address_page_lowercased_advice)"
+  },
+  "invalid_address_page_convert_cid": {
+    "message": "",
+    "description": "Link to the CID inspector, shown when a CIDv0 was damaged by lowercasing (invalid_address_page_convert_cid)"
+  },
+  "invalid_address_page_learn_dnslink": {
+    "message": "",
+    "description": "Link to the DNSLink concept docs, shown when a website name was used with ipfs:// (invalid_address_page_learn_dnslink)"
+  },
+  "invalid_address_page_learn_mutability": {
+    "message": "",
+    "description": "Link to the IPNS mutability docs, shown when an IPNS name was used with ipfs:// (invalid_address_page_learn_mutability)"
+  },
+  "invalid_address_page_unrecognized_header": {
+    "message": "",
+    "description": "Header shown when the identifier matches no known form (invalid_address_page_unrecognized_header)"
+  },
+  "invalid_address_page_unrecognized_message": {
+    "message": "",
+    "description": "Explanation shown when the identifier matches no known form (invalid_address_page_unrecognized_message)"
+  },
+  "invalid_address_page_unrecognized_advice": {
+    "message": "",
+    "description": "What to do about an unrecognized identifier (invalid_address_page_unrecognized_advice)"
+  },
+  "invalid_address_page_learn_cid": {
+    "message": "",
+    "description": "Link to the CID spec (invalid_address_page_learn_cid)"
+  },
+  "invalid_address_page_learn_ipns_record": {
+    "message": "",
+    "description": "Link to the IPNS record spec (invalid_address_page_learn_ipns_record)"
+  }
+}

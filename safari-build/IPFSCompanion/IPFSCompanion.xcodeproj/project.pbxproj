@@ -1,0 +1,995 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4BCF8CA8307FFFA90070F6E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF8CA7307FFFA90070F6E0 /* AppDelegate.swift */; };
+		4BCF8CAA307FFFA90070F6E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF8CA9307FFFA90070F6E0 /* SceneDelegate.swift */; };
+		4BCF8CAD307FFFA90070F6E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF8CAB307FFFA90070F6E0 /* LaunchScreen.storyboard */; };
+		4BCF8CB0307FFFA90070F6E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF8CAE307FFFA90070F6E0 /* Main.storyboard */; };
+		4BCF8CB9307FFFA90070F6E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF8CB8307FFFA90070F6E0 /* AppDelegate.swift */; };
+		4BCF8CBC307FFFA90070F6E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF8CBA307FFFA90070F6E0 /* Main.storyboard */; };
+		4BCF8CC3307FFFA90070F6E0 /* IPFSCompanion Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4BCF8CC2307FFFA90070F6E0 /* IPFSCompanion Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4BCF8CCD307FFFA90070F6E0 /* IPFSCompanion Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4BCF8CCC307FFFA90070F6E0 /* IPFSCompanion Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4BCF8CD2307FFFA90070F6E0 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF8C97307FFFA80070F6E0 /* Main.html */; };
+		4BCF8CD3307FFFA90070F6E0 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF8C97307FFFA80070F6E0 /* Main.html */; };
+		4BCF8CD4307FFFA90070F6E0 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF8C99307FFFA80070F6E0 /* Icon.png */; };
+		4BCF8CD5307FFFA90070F6E0 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF8C99307FFFA80070F6E0 /* Icon.png */; };
+		4BCF8CD6307FFFA90070F6E0 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF8C9A307FFFA80070F6E0 /* Style.css */; };
+		4BCF8CD7307FFFA90070F6E0 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF8C9A307FFFA80070F6E0 /* Style.css */; };
+		4BCF8CD8307FFFA90070F6E0 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF8C9B307FFFA80070F6E0 /* Script.js */; };
+		4BCF8CD9307FFFA90070F6E0 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF8C9B307FFFA80070F6E0 /* Script.js */; };
+		4BCF8CDA307FFFA90070F6E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF8C9C307FFFA80070F6E0 /* ViewController.swift */; };
+		4BCF8CDB307FFFA90070F6E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF8C9C307FFFA80070F6E0 /* ViewController.swift */; };
+		4BCF8CDC307FFFA90070F6E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF8C9D307FFFA90070F6E0 /* Assets.xcassets */; };
+		4BCF8CDD307FFFA90070F6E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF8C9D307FFFA90070F6E0 /* Assets.xcassets */; };
+		4BCF8CDE307FFFA90070F6E0 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF8C9F307FFFA90070F6E0 /* SafariWebExtensionHandler.swift */; };
+		4BCF8CDF307FFFA90070F6E0 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF8C9F307FFFA90070F6E0 /* SafariWebExtensionHandler.swift */; };
+		4BCF8CF6307FFFA90070F6E0 /* dist in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF8CF1307FFFA90070F6E0 /* dist */; };
+		4BCF8CF7307FFFA90070F6E0 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF8CF2307FFFA90070F6E0 /* images */; };
+		4BCF8CF8307FFFA90070F6E0 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF8CF3307FFFA90070F6E0 /* icons */; };
+		4BCF8CF9307FFFA90070F6E0 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF8CF4307FFFA90070F6E0 /* manifest.json */; };
+		4BCF8CFA307FFFA90070F6E0 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF8CF5307FFFA90070F6E0 /* _locales */; };
+		4BCF8CFB307FFFA90070F6E0 /* dist in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF8CF1307FFFA90070F6E0 /* dist */; };
+		4BCF8CFC307FFFA90070F6E0 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF8CF2307FFFA90070F6E0 /* images */; };
+		4BCF8CFD307FFFA90070F6E0 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF8CF3307FFFA90070F6E0 /* icons */; };
+		4BCF8CFE307FFFA90070F6E0 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF8CF4307FFFA90070F6E0 /* manifest.json */; };
+		4BCF8CFF307FFFA90070F6E0 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 4BCF8CF5307FFFA90070F6E0 /* _locales */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4BCF8CC4307FFFA90070F6E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BCF8C91307FFFA80070F6E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4BCF8CC1307FFFA90070F6E0;
+			remoteInfo = "IPFSCompanion Extension (iOS)";
+		};
+		4BCF8CCE307FFFA90070F6E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BCF8C91307FFFA80070F6E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4BCF8CCB307FFFA90070F6E0;
+			remoteInfo = "IPFSCompanion Extension (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4BCF8CE5307FFFA90070F6E0 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4BCF8CC3307FFFA90070F6E0 /* IPFSCompanion Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BCF8CEC307FFFA90070F6E0 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4BCF8CCD307FFFA90070F6E0 /* IPFSCompanion Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4BCF8C98307FFFA80070F6E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
+		4BCF8C99307FFFA80070F6E0 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		4BCF8C9A307FFFA80070F6E0 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		4BCF8C9B307FFFA80070F6E0 /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		4BCF8C9C307FFFA80070F6E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4BCF8C9D307FFFA90070F6E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4BCF8C9F307FFFA90070F6E0 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		4BCF8CA4307FFFA90070F6E0 /* IPFSCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IPFSCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BCF8CA7307FFFA90070F6E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4BCF8CA9307FFFA90070F6E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4BCF8CAC307FFFA90070F6E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4BCF8CAF307FFFA90070F6E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4BCF8CB1307FFFA90070F6E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BCF8CB6307FFFA90070F6E0 /* IPFSCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IPFSCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BCF8CB8307FFFA90070F6E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4BCF8CBB307FFFA90070F6E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4BCF8CBD307FFFA90070F6E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BCF8CC2307FFFA90070F6E0 /* IPFSCompanion Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "IPFSCompanion Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BCF8CC7307FFFA90070F6E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BCF8CCC307FFFA90070F6E0 /* IPFSCompanion Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "IPFSCompanion Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BCF8CD1307FFFA90070F6E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BCF8CF1307FFFA90070F6E0 /* dist */ = {isa = PBXFileReference; lastKnownFileType = folder; name = dist; path = Resources/dist; sourceTree = "<group>"; };
+		4BCF8CF2307FFFA90070F6E0 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = Resources/images; sourceTree = "<group>"; };
+		4BCF8CF3307FFFA90070F6E0 /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icons; path = Resources/icons; sourceTree = "<group>"; };
+		4BCF8CF4307FFFA90070F6E0 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = Resources/manifest.json; sourceTree = "<group>"; };
+		4BCF8CF5307FFFA90070F6E0 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; name = _locales; path = Resources/_locales; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4BCF8CA1307FFFA90070F6E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BCF8CB3307FFFA90070F6E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BCF8CBF307FFFA90070F6E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BCF8CC9307FFFA90070F6E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4BCF8C90307FFFA80070F6E0 = {
+			isa = PBXGroup;
+			children = (
+				4BCF8C95307FFFA80070F6E0 /* Shared (App) */,
+				4BCF8C9E307FFFA90070F6E0 /* Shared (Extension) */,
+				4BCF8CA6307FFFA90070F6E0 /* iOS (App) */,
+				4BCF8CB7307FFFA90070F6E0 /* macOS (App) */,
+				4BCF8CC6307FFFA90070F6E0 /* iOS (Extension) */,
+				4BCF8CD0307FFFA90070F6E0 /* macOS (Extension) */,
+				4BCF8CA5307FFFA90070F6E0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4BCF8C95307FFFA80070F6E0 /* Shared (App) */ = {
+			isa = PBXGroup;
+			children = (
+				4BCF8C9C307FFFA80070F6E0 /* ViewController.swift */,
+				4BCF8C9D307FFFA90070F6E0 /* Assets.xcassets */,
+				4BCF8C96307FFFA80070F6E0 /* Resources */,
+			);
+			path = "Shared (App)";
+			sourceTree = "<group>";
+		};
+		4BCF8C96307FFFA80070F6E0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4BCF8C97307FFFA80070F6E0 /* Main.html */,
+				4BCF8C99307FFFA80070F6E0 /* Icon.png */,
+				4BCF8C9A307FFFA80070F6E0 /* Style.css */,
+				4BCF8C9B307FFFA80070F6E0 /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4BCF8C9E307FFFA90070F6E0 /* Shared (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				4BCF8CF0307FFFA90070F6E0 /* Resources */,
+				4BCF8C9F307FFFA90070F6E0 /* SafariWebExtensionHandler.swift */,
+			);
+			path = "Shared (Extension)";
+			sourceTree = "<group>";
+		};
+		4BCF8CA5307FFFA90070F6E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4BCF8CA4307FFFA90070F6E0 /* IPFSCompanion.app */,
+				4BCF8CB6307FFFA90070F6E0 /* IPFSCompanion.app */,
+				4BCF8CC2307FFFA90070F6E0 /* IPFSCompanion Extension.appex */,
+				4BCF8CCC307FFFA90070F6E0 /* IPFSCompanion Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4BCF8CA6307FFFA90070F6E0 /* iOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				4BCF8CA7307FFFA90070F6E0 /* AppDelegate.swift */,
+				4BCF8CA9307FFFA90070F6E0 /* SceneDelegate.swift */,
+				4BCF8CAB307FFFA90070F6E0 /* LaunchScreen.storyboard */,
+				4BCF8CAE307FFFA90070F6E0 /* Main.storyboard */,
+				4BCF8CB1307FFFA90070F6E0 /* Info.plist */,
+			);
+			path = "iOS (App)";
+			sourceTree = "<group>";
+		};
+		4BCF8CB7307FFFA90070F6E0 /* macOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				4BCF8CB8307FFFA90070F6E0 /* AppDelegate.swift */,
+				4BCF8CBA307FFFA90070F6E0 /* Main.storyboard */,
+				4BCF8CBD307FFFA90070F6E0 /* Info.plist */,
+			);
+			path = "macOS (App)";
+			sourceTree = "<group>";
+		};
+		4BCF8CC6307FFFA90070F6E0 /* iOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				4BCF8CC7307FFFA90070F6E0 /* Info.plist */,
+			);
+			path = "iOS (Extension)";
+			sourceTree = "<group>";
+		};
+		4BCF8CD0307FFFA90070F6E0 /* macOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				4BCF8CD1307FFFA90070F6E0 /* Info.plist */,
+			);
+			path = "macOS (Extension)";
+			sourceTree = "<group>";
+		};
+		4BCF8CF0307FFFA90070F6E0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4BCF8CF1307FFFA90070F6E0 /* dist */,
+				4BCF8CF2307FFFA90070F6E0 /* images */,
+				4BCF8CF3307FFFA90070F6E0 /* icons */,
+				4BCF8CF4307FFFA90070F6E0 /* manifest.json */,
+				4BCF8CF5307FFFA90070F6E0 /* _locales */,
+			);
+			name = Resources;
+			path = "Shared (Extension)";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4BCF8CA3307FFFA90070F6E0 /* IPFSCompanion (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BCF8CE6307FFFA90070F6E0 /* Build configuration list for PBXNativeTarget "IPFSCompanion (iOS)" */;
+			buildPhases = (
+				4BCF8CA0307FFFA90070F6E0 /* Sources */,
+				4BCF8CA1307FFFA90070F6E0 /* Frameworks */,
+				4BCF8CA2307FFFA90070F6E0 /* Resources */,
+				4BCF8CE5307FFFA90070F6E0 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4BCF8CC5307FFFA90070F6E0 /* PBXTargetDependency */,
+			);
+			name = "IPFSCompanion (iOS)";
+			packageProductDependencies = (
+			);
+			productName = "IPFSCompanion (iOS)";
+			productReference = 4BCF8CA4307FFFA90070F6E0 /* IPFSCompanion.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4BCF8CB5307FFFA90070F6E0 /* IPFSCompanion (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BCF8CED307FFFA90070F6E0 /* Build configuration list for PBXNativeTarget "IPFSCompanion (macOS)" */;
+			buildPhases = (
+				4BCF8CB2307FFFA90070F6E0 /* Sources */,
+				4BCF8CB3307FFFA90070F6E0 /* Frameworks */,
+				4BCF8CB4307FFFA90070F6E0 /* Resources */,
+				4BCF8CEC307FFFA90070F6E0 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4BCF8CCF307FFFA90070F6E0 /* PBXTargetDependency */,
+			);
+			name = "IPFSCompanion (macOS)";
+			packageProductDependencies = (
+			);
+			productName = "IPFSCompanion (macOS)";
+			productReference = 4BCF8CB6307FFFA90070F6E0 /* IPFSCompanion.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4BCF8CC1307FFFA90070F6E0 /* IPFSCompanion Extension (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BCF8CE2307FFFA90070F6E0 /* Build configuration list for PBXNativeTarget "IPFSCompanion Extension (iOS)" */;
+			buildPhases = (
+				4BCF8CBE307FFFA90070F6E0 /* Sources */,
+				4BCF8CBF307FFFA90070F6E0 /* Frameworks */,
+				4BCF8CC0307FFFA90070F6E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "IPFSCompanion Extension (iOS)";
+			packageProductDependencies = (
+			);
+			productName = "IPFSCompanion Extension (iOS)";
+			productReference = 4BCF8CC2307FFFA90070F6E0 /* IPFSCompanion Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		4BCF8CCB307FFFA90070F6E0 /* IPFSCompanion Extension (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BCF8CE9307FFFA90070F6E0 /* Build configuration list for PBXNativeTarget "IPFSCompanion Extension (macOS)" */;
+			buildPhases = (
+				4BCF8CC8307FFFA90070F6E0 /* Sources */,
+				4BCF8CC9307FFFA90070F6E0 /* Frameworks */,
+				4BCF8CCA307FFFA90070F6E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "IPFSCompanion Extension (macOS)";
+			packageProductDependencies = (
+			);
+			productName = "IPFSCompanion Extension (macOS)";
+			productReference = 4BCF8CCC307FFFA90070F6E0 /* IPFSCompanion Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4BCF8C91307FFFA80070F6E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2660;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = {
+					4BCF8CA3307FFFA90070F6E0 = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					4BCF8CB5307FFFA90070F6E0 = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					4BCF8CC1307FFFA90070F6E0 = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					4BCF8CCB307FFFA90070F6E0 = {
+						CreatedOnToolsVersion = 26.6;
+					};
+				};
+			};
+			buildConfigurationList = 4BCF8C94307FFFA80070F6E0 /* Build configuration list for PBXProject "IPFSCompanion" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4BCF8C90307FFFA80070F6E0;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 4BCF8CA5307FFFA90070F6E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4BCF8CA3307FFFA90070F6E0 /* IPFSCompanion (iOS) */,
+				4BCF8CB5307FFFA90070F6E0 /* IPFSCompanion (macOS) */,
+				4BCF8CC1307FFFA90070F6E0 /* IPFSCompanion Extension (iOS) */,
+				4BCF8CCB307FFFA90070F6E0 /* IPFSCompanion Extension (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4BCF8CA2307FFFA90070F6E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BCF8CD4307FFFA90070F6E0 /* Icon.png in Resources */,
+				4BCF8CAD307FFFA90070F6E0 /* LaunchScreen.storyboard in Resources */,
+				4BCF8CD2307FFFA90070F6E0 /* Main.html in Resources */,
+				4BCF8CD8307FFFA90070F6E0 /* Script.js in Resources */,
+				4BCF8CDC307FFFA90070F6E0 /* Assets.xcassets in Resources */,
+				4BCF8CB0307FFFA90070F6E0 /* Main.storyboard in Resources */,
+				4BCF8CD6307FFFA90070F6E0 /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BCF8CB4307FFFA90070F6E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BCF8CD5307FFFA90070F6E0 /* Icon.png in Resources */,
+				4BCF8CD7307FFFA90070F6E0 /* Style.css in Resources */,
+				4BCF8CBC307FFFA90070F6E0 /* Main.storyboard in Resources */,
+				4BCF8CD9307FFFA90070F6E0 /* Script.js in Resources */,
+				4BCF8CDD307FFFA90070F6E0 /* Assets.xcassets in Resources */,
+				4BCF8CD3307FFFA90070F6E0 /* Main.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BCF8CC0307FFFA90070F6E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BCF8CFE307FFFA90070F6E0 /* manifest.json in Resources */,
+				4BCF8CFD307FFFA90070F6E0 /* icons in Resources */,
+				4BCF8CFC307FFFA90070F6E0 /* images in Resources */,
+				4BCF8CFF307FFFA90070F6E0 /* _locales in Resources */,
+				4BCF8CFB307FFFA90070F6E0 /* dist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BCF8CCA307FFFA90070F6E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BCF8CF9307FFFA90070F6E0 /* manifest.json in Resources */,
+				4BCF8CF8307FFFA90070F6E0 /* icons in Resources */,
+				4BCF8CF7307FFFA90070F6E0 /* images in Resources */,
+				4BCF8CFA307FFFA90070F6E0 /* _locales in Resources */,
+				4BCF8CF6307FFFA90070F6E0 /* dist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4BCF8CA0307FFFA90070F6E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BCF8CDA307FFFA90070F6E0 /* ViewController.swift in Sources */,
+				4BCF8CA8307FFFA90070F6E0 /* AppDelegate.swift in Sources */,
+				4BCF8CAA307FFFA90070F6E0 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BCF8CB2307FFFA90070F6E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BCF8CDB307FFFA90070F6E0 /* ViewController.swift in Sources */,
+				4BCF8CB9307FFFA90070F6E0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BCF8CBE307FFFA90070F6E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BCF8CDE307FFFA90070F6E0 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BCF8CC8307FFFA90070F6E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BCF8CDF307FFFA90070F6E0 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4BCF8CC5307FFFA90070F6E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4BCF8CC1307FFFA90070F6E0 /* IPFSCompanion Extension (iOS) */;
+			targetProxy = 4BCF8CC4307FFFA90070F6E0 /* PBXContainerItemProxy */;
+		};
+		4BCF8CCF307FFFA90070F6E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4BCF8CCB307FFFA90070F6E0 /* IPFSCompanion Extension (macOS) */;
+			targetProxy = 4BCF8CCE307FFFA90070F6E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4BCF8C97307FFFA80070F6E0 /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4BCF8C98307FFFA80070F6E0 /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		4BCF8CAB307FFFA90070F6E0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4BCF8CAC307FFFA90070F6E0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4BCF8CAE307FFFA90070F6E0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4BCF8CAF307FFFA90070F6E0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4BCF8CBA307FFFA90070F6E0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4BCF8CBB307FFFA90070F6E0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4BCF8CE0307FFFA90070F6E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4BCF8CE1307FFFA90070F6E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		4BCF8CE3307FFFA90070F6E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M684FYCYG6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "IPFSCompanion Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.ipfs.IPFSCompanion.Extension;
+				PRODUCT_NAME = "IPFSCompanion Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4BCF8CE4307FFFA90070F6E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M684FYCYG6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "IPFSCompanion Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.ipfs.IPFSCompanion.Extension;
+				PRODUCT_NAME = "IPFSCompanion Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4BCF8CE7307FFFA90070F6E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M684FYCYG6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = IPFSCompanion;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.ipfs.IPFSCompanion;
+				PRODUCT_NAME = IPFSCompanion;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4BCF8CE8307FFFA90070F6E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M684FYCYG6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = IPFSCompanion;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.ipfs.IPFSCompanion;
+				PRODUCT_NAME = IPFSCompanion;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4BCF8CEA307FFFA90070F6E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M684FYCYG6;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "IPFSCompanion Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.ipfs.IPFSCompanion.Extension;
+				PRODUCT_NAME = "IPFSCompanion Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4BCF8CEB307FFFA90070F6E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M684FYCYG6;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "IPFSCompanion Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.ipfs.IPFSCompanion.Extension;
+				PRODUCT_NAME = "IPFSCompanion Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		4BCF8CEE307FFFA90070F6E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M684FYCYG6;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = IPFSCompanion;
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.ipfs.IPFSCompanion;
+				PRODUCT_NAME = IPFSCompanion;
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4BCF8CEF307FFFA90070F6E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M684FYCYG6;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = IPFSCompanion;
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.ipfs.IPFSCompanion;
+				PRODUCT_NAME = IPFSCompanion;
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4BCF8C94307FFFA80070F6E0 /* Build configuration list for PBXProject "IPFSCompanion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BCF8CE0307FFFA90070F6E0 /* Debug */,
+				4BCF8CE1307FFFA90070F6E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BCF8CE2307FFFA90070F6E0 /* Build configuration list for PBXNativeTarget "IPFSCompanion Extension (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BCF8CE3307FFFA90070F6E0 /* Debug */,
+				4BCF8CE4307FFFA90070F6E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BCF8CE6307FFFA90070F6E0 /* Build configuration list for PBXNativeTarget "IPFSCompanion (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BCF8CE7307FFFA90070F6E0 /* Debug */,
+				4BCF8CE8307FFFA90070F6E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BCF8CE9307FFFA90070F6E0 /* Build configuration list for PBXNativeTarget "IPFSCompanion Extension (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BCF8CEA307FFFA90070F6E0 /* Debug */,
+				4BCF8CEB307FFFA90070F6E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BCF8CED307FFFA90070F6E0 /* Build configuration list for PBXNativeTarget "IPFSCompanion (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BCF8CEE307FFFA90070F6E0 /* Debug */,
+				4BCF8CEF307FFFA90070F6E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4BCF8C91307FFFA80070F6E0 /* Project object */;
+}

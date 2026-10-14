@@ -22,3 +22,6 @@
 # playwright e2e artifacts
 test-results/
 playwright-report/
+
+distros/
+!safari-build/
