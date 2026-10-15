@@ -125,7 +125,7 @@ export default async function init (inQuickImport = false) {
     if (state.active) {
       // It's ok for this to fail, node might be unavailable or mis-configured
       try {
-        ipfs = await initIpfsClient(browser, state, inQuickImport)
+        ipfs = await initIpfsClient(browser, state, inQuickImport, runtime)
       } catch (err) {
         console.error('[ipfs-companion] Failed to init IPFS client', err)
         notify(
@@ -920,7 +920,7 @@ export default async function init (inQuickImport = false) {
 
       try {
         log('starting ipfs client with the new config')
-        ipfs = await initIpfsClient(browser, state)
+        ipfs = await initIpfsClient(browser, state, false, runtime)
       } catch (err) {
         console.error('[ipfs-companion] Failed to init IPFS client', err)
         notify(

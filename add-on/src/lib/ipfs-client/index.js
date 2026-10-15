@@ -10,6 +10,7 @@ import {
   WebUiReloader,
   prepareReloadExtensions
 } from './reloaders/index.js'
+import { installSafariFetchProxy, uninstallSafariFetchProxy } from './safari-proxy.js'
 const log = debug('ipfs-companion:client')
 log.error = debug('ipfs-companion:client:error')
 
@@ -18,7 +19,7 @@ let client
 // handle for the delayed precache so destroy() can cancel a pending run
 let precacheTimeout
 
-export async function initIpfsClient (browser, opts, inQuickImport) {
+export async function initIpfsClient (browser, opts, inQuickImport, runtime) {
   log('init ipfs client')
   if (client) return // await destroyIpfsClient()
   let backend
@@ -29,6 +30,11 @@ export async function initIpfsClient (browser, opts, inQuickImport) {
     default:
       throw new Error(`Unsupported ipfsNodeType: ${opts.ipfsNodeType}`)
   }
+
+  if (runtime?.isSafari) {
+    installSafariFetchProxy(() => opts)
+  }
+
   const instance = await backend.init(browser, opts)
   if (!inQuickImport) {
     _reloadIpfsClientDependents(browser, instance, opts) // async (API is present)
@@ -41,6 +47,7 @@ export async function destroyIpfsClient (browser) {
   log('destroy ipfs client')
   if (!client) return
   clearTimeout(precacheTimeout)
+  uninstallSafariFetchProxy()
   try {
     await client.destroy(browser)
     await _reloadIpfsClientDependents(browser) // sync (API stopped working)

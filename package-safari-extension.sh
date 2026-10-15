@@ -24,6 +24,7 @@ EOF
 }
 
 EXTENSION_SRC="./distros/safari"
+NATIVE_TEMPLATE_DIR="./distros/safari-native"
 PACKAGER_ARGS=()
 PACKAGER_SHOW_HELP=false
 
@@ -130,6 +131,17 @@ else
         "${PACKAGER_ARGS[@]}" \
         "$EXTENSION_SRC"
 fi
+
+# Restore custom native sources. safari-web-extension-packager may regenerate
+# boilerplate files, so we re-apply our Safari-specific Swift handler, ATS
+# exceptions, and entitlements after each packaging run.
+if [[ -d "$NATIVE_TEMPLATE_DIR" ]]; then
+    echo "==> Restoring custom Safari native sources from: $NATIVE_TEMPLATE_DIR"
+    cp -R "$NATIVE_TEMPLATE_DIR/"* "$PROJECT_LOCATION/IPFSCompanion/"
+fi
+
+echo "==> Patching Safari extension project entitlements..."
+node scripts/patch-safari-project.js
 
 # restore default Chromium manifest for normal development builds
 node scripts/merge-manifest.js chromium || true

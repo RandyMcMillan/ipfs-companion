@@ -25,7 +25,8 @@ export default [
       'add-on/dist/**',
       'add-on/ui-kit/**',
       'add-on/webui/**',
-      'build/**'
+      'build/**',
+      'safari-build/**'
     ]
   },
   ...neostandard({ ts: true }),
