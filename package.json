@@ -1,6 +1,6 @@
 {
   "name": "ipfs-companion",
-  "version": "3.9.0",
+  "version": "4.2.0",
   "homepage": "https://github.com/ipfs/ipfs-companion",
   "license": "CC0-1.0",
   "leadMaintainer": "Marcin Rataj <lidel@lidel.org>",
@@ -19,7 +19,7 @@
     "clean:dist": "shx rm -rf add-on/dist",
     "clean:ui-kit": "shx rm -rf add-on/ui-kit",
     "clean:webui": "shx rm -rf add-on/webui",
-    "build": "run-s clean build:*",
+    "build": "run-s clean build:* && node scripts/patch-safari-project.js",
     "build:copy": "run-s build:copy:*",
     "build:copy:src": "shx mkdir -p add-on/dist && shx cp -R add-on/src/* add-on/dist",
     "build:js": "run-s build:js:*",
@@ -50,7 +50,7 @@
     "fix:lint:standard": "eslint . --fix",
     "precommit": "run-s lint:standard",
     "prepush": "run-s clean build lint test",
-    "chromium": "run-s bundle:chromium && web-ext run --no-reload --target chromium",
+    "chromium": "run-s bundle:chromium && web-ext run --no-reload --target chromium ${CHROMIUM_BINARY:+--chromium-binary \"$CHROMIUM_BINARY\"}",
     "firefox": "run-s bundle:firefox && web-ext run --no-reload --url about:debugging --verbose",
     "firefox:nightly": "cross-env PATH=\"./firefox:$PATH\" run-s get-firefox-nightly firefox",
     "get-firefox-nightly": "shx test -e ./firefox/firefox || get-firefox -b nightly -e",
@@ -63,7 +63,7 @@
     "ci:test": "npm test",
     "ci:lint": "npm run lint",
     "beta-build": "docker rmi -f ipfs-companion-beta-build && docker build -t ipfs-companion-beta-build --build-arg USER_ID=$(id -u ${USER}) --build-arg GROUP_ID=$(id -g ${USER}) . && mkdir -p build && docker run --rm --net=host -v $(pwd)/build:/home/node/app/build ipfs-companion-beta-build npm run ci:build:beta",
-    "release-build": "docker rmi -f ipfs-companion-release-build && docker build -t ipfs-companion-release-build --build-arg USER_ID=$(id -u ${USER}) --build-arg GROUP_ID=$(id -g ${USER}) . && mkdir -p build && docker run --rm --net=host -v $(pwd)/build:/home/node/app/build ipfs-companion-release-build npm run ci:build:stable",
+    "release-build": "docker rmi -f ipfs-companion-release-build && docker build -t ipfs-companion-release-build --build-arg USER_ID=$(id -u ${USER}) --build-arg GROUP_ID=$(id -g ${USER}) . && mkdir -p build && docker run --rm --net=host -v $(pwd)/build:/home/node/app/build ipfs-companion-release-build && node scripts/patch-safari-project.js && npm run ci:build:stable",
     "dev-build": "npm ci && cross-env NODE_ENV='development' npm run build",
     "compose:e2e:prepare": "docker compose --file docker-compose.e2e.yml pull && docker compose --file docker-compose.e2e.yml build",
     "compose:e2e:up": "docker compose --file docker-compose.e2e.yml up --remove-orphans --detach kubo",
@@ -85,7 +85,7 @@
     "@types/webextension-polyfill": "0.12.5",
     "@vitest/coverage-v8": "4.1.9",
     "chai": "6.2.2",
-    "cross-env": "10.1.0",
+    "cross-env": "^10.1.0",
     "css-loader": "7.1.4",
     "eslint": "9.39.4",
     "fast-hash-code": "2.1.0",
@@ -107,6 +107,7 @@
   "dependencies": {
     "@material/switch": "10.0.0",
     "choo": "7.1.0",
+    "chrome-launcher": "^1.2.2",
     "debug": "4.4.3",
     "filesize": "11.0.19",
     "ipfs-css": "1.4.0",
@@ -117,6 +118,8 @@
     "lru-cache": "11.5.1",
     "p-memoize": "8.0.0",
     "p-queue": "9.3.0",
+    "present": "^1.0.0",
+    "scripts": "^0.1.0",
     "tachyons": "4.12.0",
     "webextension-polyfill": "0.12.0"
   },
@@ -136,5 +139,8 @@
   "engines": {
     "node": ">=20.18.0",
     "npm": ">=10.8.2"
+  },
+  "allowScripts": {
+    "fsevents": false
   }
 }
