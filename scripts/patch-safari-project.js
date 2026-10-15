@@ -1,6 +1,6 @@
 import { readFileSync, writeFileSync } from 'node:fs'
 
-const projectFile = 'safari-build/IPFSCompanion/IPFSCompanion.xcodeproj/project.pbxproj'
+const projectFile = 'safari-build/safari-native-templates/IPFSCompanion.xcodeproj/project.pbxproj'
 const manifestFile = 'add-on/manifest.common.json'
 const developmentTeam = 'M684FYCYG6'
 
