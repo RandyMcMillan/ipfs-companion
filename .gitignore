@@ -25,3 +25,4 @@ playwright-report/
 
 distros/
 !safari-build/
+safari-build/IPFSCompanion
