@@ -1,15 +1,30 @@
 import { readFileSync, writeFileSync } from 'node:fs'
+import { execSync } from 'node:child_process'
 
 const projectFile = 'safari-build/safari-native-templates/IPFSCompanion.xcodeproj/project.pbxproj'
-const manifestFile = 'add-on/manifest.common.json'
+const releasePleaseManifestFile = 'package.json'
+const manifestFile = 'package.json'
+//const manifestFile = '.release-please-manifest.json'
+const manifest = JSON.parse(readFileSync(manifestFile, 'utf8'))
 const developmentTeam = 'M684FYCYG6'
 
+// Read the release-please manifest for the canonical base version.
+const releasePleaseManifest = JSON.parse(readFileSync(releasePleaseManifestFile, 'utf8'))
+const baseVersion = releasePleaseManifest['.'] || '9.9.9'
+
 // Read the version that the build process wrote into the common manifest.
-const manifest = JSON.parse(readFileSync(manifestFile, 'utf8'))
-const version = manifest.version || '3.4.0'
+// const manifest = JSON.parse(readFileSync(manifestFile, 'utf8'))
+const version = manifest.version // || '0.0.0'
 const versionParts = version.split('.')
 const marketingVersion = version
+
+// Compute a build number from the git history so dev/beta builds are distinct.
+//const buildNumber = execSync('git rev-list --count --first-parent HEAD', { encoding: 'utf8' }).trim()
 const buildNumber = versionParts.length > 3 ? versionParts[versionParts.length - 1] : '1'
+
+const isStable = process.env.RELEASE_CHANNEL === 'stable'
+//const marketingVersion = isStable ? baseVersion : `${baseVersion}.${buildNumber}`
+const currentProjectVersion = isStable ? '1' : buildNumber
 
 const content = readFileSync(projectFile, 'utf8')
 const lines = content.split('\n')
@@ -39,6 +54,7 @@ for (let i = 0; i < lines.length; i++) {
 
   if (/^\s*CURRENT_PROJECT_VERSION\s*=\s*\d+;\s*$/.test(line)) {
     const indent = line.match(/^(\s*)/)[1]
+    // output.push(`${indent}CURRENT_PROJECT_VERSION = ${currentProjectVersion};`)
     output.push(`${indent}CURRENT_PROJECT_VERSION = ${buildNumber};`)
     continue
   }
@@ -95,4 +111,4 @@ for (let i = 0; i < lines.length; i++) {
 }
 
 writeFileSync(projectFile, output.join('\n'))
-console.log(`Patched Safari project: version=${marketingVersion}, build=${buildNumber}, team=${developmentTeam}`)
+console.log(`Patched Safari project: version=${marketingVersion}, build=${currentProjectVersion}, team=${developmentTeam}`)
