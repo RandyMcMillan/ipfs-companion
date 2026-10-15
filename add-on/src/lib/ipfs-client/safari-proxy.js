@@ -77,7 +77,10 @@ function normalizeUrlString (resource) {
 async function proxyFetch (url, options) {
   const method = (options.method || 'GET').toUpperCase()
   const headers = normalizeHeaders(options.headers)
-  const bodyBase64 = await encodeBody(options.body)
+  const { bodyBase64, contentType } = await encodeBody(options.body)
+  if (contentType && !hasHeader(headers, 'content-type')) {
+    headers['Content-Type'] = contentType
+  }
 
   const message = {
     type: 'http',
@@ -127,29 +130,49 @@ function normalizeHeaders (headersInit) {
   return headers
 }
 
+function hasHeader (headers, name) {
+  const lower = name.toLowerCase()
+  return Object.keys(headers).some((key) => key.toLowerCase() === lower)
+}
+
 async function encodeBody (body) {
-  if (body == null) return null
+  if (body == null) return { bodyBase64: null }
 
   if (typeof body === 'string') {
-    return base64FromBuffer(new TextEncoder().encode(body))
+    return {
+      bodyBase64: base64FromBuffer(new TextEncoder().encode(body)),
+      contentType: 'text/plain;charset=UTF-8'
+    }
   }
 
   if (body instanceof ArrayBuffer || ArrayBuffer.isView(body)) {
-    return base64FromBuffer(body)
+    return { bodyBase64: base64FromBuffer(body) }
   }
 
   if (body instanceof Blob) {
     const arrayBuffer = await body.arrayBuffer()
-    return base64FromBuffer(arrayBuffer)
+    return { bodyBase64: base64FromBuffer(arrayBuffer), contentType: body.type || undefined }
   }
 
-  if (body instanceof FormData || body instanceof URLSearchParams) {
+  if (body instanceof URLSearchParams) {
     const text = body.toString()
-    return base64FromBuffer(new TextEncoder().encode(text))
+    return {
+      bodyBase64: base64FromBuffer(new TextEncoder().encode(text)),
+      contentType: 'application/x-www-form-urlencoded;charset=UTF-8'
+    }
+  }
+
+  if (body instanceof FormData) {
+    const response = new Response(body)
+    const arrayBuffer = await response.arrayBuffer()
+    return {
+      bodyBase64: base64FromBuffer(arrayBuffer),
+      contentType: response.headers.get('content-type') || undefined
+    }
   }
 
   log.error('unsupported fetch body type, sending empty body', typeof body, body?.constructor?.name)
-  return null
+  return { bodyBase64: null }
 }
 
 function base64FromBuffer (buffer) {
