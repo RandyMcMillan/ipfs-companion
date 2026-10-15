@@ -24,7 +24,7 @@ EOF
 }
 
 EXTENSION_SRC="./distros/safari"
-NATIVE_TEMPLATE_DIR="./distros/safari-native"
+NATIVE_TEMPLATE_DIR="./safari-build/safari-native-templates"
 PACKAGER_ARGS=()
 PACKAGER_SHOW_HELP=false
 
