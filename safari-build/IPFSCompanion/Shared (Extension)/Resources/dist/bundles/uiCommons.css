@@ -4308,8 +4308,6 @@ See: https://github.com/ipfs-shipyard/ipfs-css
 .mdc-switch__thumb-underlay.mdc-ripple-upgraded {
   --mdc-ripple-fg-opacity: var(--mdc-ripple-press-opacity, 0.12);
 }
-
-/*# sourceMappingURL=mdc.switch.css.map*/
 .mdc-switch {
   --mdc-theme-secondary: #3e9096 /* teal */
 }
@@ -4320,5 +4318,3 @@ See: https://github.com/ipfs-shipyard/ipfs-css
   border-color: #7f8491;
 }
 
-
-/*# sourceMappingURL=uiCommons.css.map*/

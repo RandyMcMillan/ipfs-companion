@@ -43,5 +43,3 @@ input[type=checkbox]:checked + .mark::after {
   transform: rotate(-45deg);
 }
 
-
-/*# sourceMappingURL=importPage.css.map*/

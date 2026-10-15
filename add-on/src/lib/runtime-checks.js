@@ -41,6 +41,13 @@ export default async function createRuntimeChecks (browser) {
   const isBrave = (typeof navigator !== 'undefined' && navigator.brave && await navigator.brave.isBrave?.()) || false
   if (isBrave) log('Detected Brave browser via navigator.brave.isBrave()')
 
+  // Safari detection via its user agent. Chromium-based browsers and Firefox
+  // also advertise "Safari" in their UA, so exclude them explicitly.
+  const isSafari = typeof navigator !== 'undefined' &&
+    /Safari/i.test(navigator.userAgent || '') &&
+    !/Chrome|Chromium|Edg|OPR|Firefox/i.test(navigator.userAgent || '')
+  if (isSafari) log('Detected Safari browser via navigator.userAgent')
+
   // platform
   const platformInfo = await getPlatformInfo(browser)
   const isAndroid = platformInfo ? platformInfo.os === 'android' : false
@@ -50,6 +57,7 @@ export default async function createRuntimeChecks (browser) {
     browser,
     isFirefox,
     isBrave,
+    isSafari,
     isAndroid,
     requiresXHRCORSfix: !!(isFirefox && version && version.startsWith('68')),
     hasNativeProtocolHandler

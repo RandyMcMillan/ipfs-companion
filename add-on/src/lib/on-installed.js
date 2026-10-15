@@ -22,7 +22,15 @@ export async function runPendingOnInstallTasks () {
   // throws: Error: permissions.request may only be called from a user input handler
   // To avoid this, we open a new tab with the permissions page and ask the user to grant the permissions.
   // That makes the request valid and allows us to gain access to the permissions.
-  if (!(await browser.permissions.contains({ origins: ['<all_urls>'] }))) {
+  // Safari manages extension website access through its own settings UI, not
+  // through this permissions page. Its `permissions.contains({ origins:
+  // ['<all_urls>'] })` check does not reflect that state, so gating on it
+  // would open this page on every service-worker wake. Treat Safari as
+  // handled by the browser instead of prompting here.
+  const isSafari = typeof navigator !== 'undefined' &&
+    /Safari/i.test(navigator.userAgent || '') &&
+    !/Chrome|Chromium|Edg|OPR|Firefox/i.test(navigator.userAgent || '')
+  if (!isSafari && !(await browser.permissions.contains({ origins: ['<all_urls>'] }))) {
     return browser.tabs.create({
       url: requestRequiredPermissionsPage
     })

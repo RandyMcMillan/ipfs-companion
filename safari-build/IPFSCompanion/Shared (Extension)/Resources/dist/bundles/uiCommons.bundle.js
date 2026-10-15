@@ -173,4 +173,3 @@
       class="v-mid ${r?"":"o-40"} ${r&&e?"heartbeat":""}"
       style="width:${i}px; height:${i}px" />
   `}r.d(t,{A:()=>s})}}]);
-//# sourceMappingURL=uiCommons.bundle.js.map
