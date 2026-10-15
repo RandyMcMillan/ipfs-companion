@@ -11,7 +11,7 @@ const versionParts = version.split('.')
 const marketingVersion = version
 const buildNumber = versionParts.length > 3 ? versionParts[versionParts.length - 1] : '1'
 
-let content = readFileSync(projectFile, 'utf8')
+const content = readFileSync(projectFile, 'utf8')
 const lines = content.split('\n')
 const output = []
 let inConfig = false
