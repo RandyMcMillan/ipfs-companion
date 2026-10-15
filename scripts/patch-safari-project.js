@@ -2,18 +2,10 @@ import { readFileSync, writeFileSync } from 'node:fs'
 import { execSync } from 'node:child_process'
 
 const projectFile = 'safari-build/safari-native-templates/IPFSCompanion.xcodeproj/project.pbxproj'
-const releasePleaseManifestFile = 'package.json'
 const manifestFile = 'package.json'
-//const manifestFile = '.release-please-manifest.json'
 const manifest = JSON.parse(readFileSync(manifestFile, 'utf8'))
 const developmentTeam = 'M684FYCYG6'
 
-// Read the release-please manifest for the canonical base version.
-const releasePleaseManifest = JSON.parse(readFileSync(releasePleaseManifestFile, 'utf8'))
-const baseVersion = releasePleaseManifest['.'] || '9.9.9'
-
-// Read the version that the build process wrote into the common manifest.
-// const manifest = JSON.parse(readFileSync(manifestFile, 'utf8'))
 const version = manifest.version // || '0.0.0'
 const versionParts = version.split('.')
 const marketingVersion = version
