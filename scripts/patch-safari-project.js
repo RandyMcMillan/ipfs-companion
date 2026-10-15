@@ -1,9 +1,18 @@
 import { readFileSync, writeFileSync } from 'node:fs'
 
 const projectFile = 'safari-build/IPFSCompanion/IPFSCompanion.xcodeproj/project.pbxproj'
+const manifestFile = 'add-on/manifest.common.json'
 const developmentTeam = 'M684FYCYG6'
 
-const lines = readFileSync(projectFile, 'utf8').split('\n')
+// Read the version that the build process wrote into the common manifest.
+const manifest = JSON.parse(readFileSync(manifestFile, 'utf8'))
+const version = manifest.version || '3.4.0'
+const versionParts = version.split('.')
+const marketingVersion = version
+const buildNumber = versionParts.length > 3 ? versionParts[versionParts.length - 1] : '1'
+
+let content = readFileSync(projectFile, 'utf8')
+const lines = content.split('\n')
 const output = []
 let inConfig = false
 let isExtensionConfig = false
@@ -20,6 +29,20 @@ function peekAhead (start, pattern, stopPattern) {
 
 for (let i = 0; i < lines.length; i++) {
   const line = lines[i]
+
+  // Replace version/build values wherever they appear.
+  if (/^\s*MARKETING_VERSION\s*=\s*[^;]+;\s*$/.test(line)) {
+    const indent = line.match(/^(\s*)/)[1]
+    output.push(`${indent}MARKETING_VERSION = ${marketingVersion};`)
+    continue
+  }
+
+  if (/^\s*CURRENT_PROJECT_VERSION\s*=\s*\d+;\s*$/.test(line)) {
+    const indent = line.match(/^(\s*)/)[1]
+    output.push(`${indent}CURRENT_PROJECT_VERSION = ${buildNumber};`)
+    continue
+  }
+
   output.push(line)
 
   // Detect the start of a build configuration block
@@ -72,4 +95,4 @@ for (let i = 0; i < lines.length; i++) {
 }
 
 writeFileSync(projectFile, output.join('\n'))
-console.log('Patched Safari project team and entitlements.')
+console.log(`Patched Safari project: version=${marketingVersion}, build=${buildNumber}, team=${developmentTeam}`)
