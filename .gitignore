@@ -26,3 +26,7 @@ playwright-report/
 distros/
 !safari-build/
 safari-build/IPFSCompanion
+
+# web-ext signed build artifacts (add-on.pem is a private signing key)
+/add-on.crx
+/add-on.pem
