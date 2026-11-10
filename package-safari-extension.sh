@@ -5,7 +5,7 @@ usage() {
     cat <<'EOF'
 Usage: package-safari-extension.sh [OPTIONS] [EXTENSION_SRC] [-- [PACKAGER_ARGS...]]
 
-Package or rebuild the IPFS Companion Safari Web Extension into an Xcode project
+Package the IPFS Companion Safari Web Extension into an Xcode project
 using Xcode's safari-web-extension-packager.
 
 Options:
@@ -56,7 +56,9 @@ while (($#)); do
     shift
 done
 
-for arg in "${PACKAGER_ARGS[@]}"; do
+# bash 3.2 (macOS default) treats "${PACKAGER_ARGS[@]}" on an empty array as an
+# unbound variable under set -u, so guard every expansion with the ${arr[@]+...} idiom.
+for arg in ${PACKAGER_ARGS[@]+"${PACKAGER_ARGS[@]}"}; do
     case "$arg" in
         -h|--help)
             PACKAGER_SHOW_HELP=true
@@ -106,31 +108,23 @@ echo "==> Target output location:  $PROJECT_LOCATION"
 echo "==> App Name:               $APP_NAME"
 echo "==> Bundle ID:              $BUNDLE_IDENTIFIER"
 
-if [[ -d "$PROJECT_FILE" ]]; then
-    echo "==> Existing Xcode project detected. Rebuilding project target..."
-    xcrun safari-web-extension-packager \
-        --rebuild-project "$PROJECT_FILE" \
-        --project-location "$PROJECT_LOCATION" \
-        --app-name "$APP_NAME" \
-        --bundle-identifier "$BUNDLE_IDENTIFIER" \
-        --copy-resources \
-        --no-prompt \
-        --no-open \
-        "${PACKAGER_ARGS[@]}" \
-        "$EXTENSION_SRC"
-else
-    echo "==> No existing project found. Creating a fresh Xcode project..."
-    mkdir -p "$PROJECT_LOCATION"
-    xcrun safari-web-extension-packager \
-        --project-location "$PROJECT_LOCATION" \
-        --app-name "$APP_NAME" \
-        --bundle-identifier "$BUNDLE_IDENTIFIER" \
-        --copy-resources \
-        --no-prompt \
-        --no-open \
-        "${PACKAGER_ARGS[@]}" \
-        "$EXTENSION_SRC"
-fi
+# Always generate a fresh project. --rebuild-project aborts (SIGABRT) with
+# recent Xcode (observed on 26.6), and the tracked native templates are restored
+# over the generated boilerplate below, so no previous run state needs preserving.
+# --force replaces only the generated IPFSCompanion app directory, leaving
+# --project-location (and safari-native-templates) intact.
+echo "==> Generating Xcode project (replacing any previous boilerplate)..."
+mkdir -p "$PROJECT_LOCATION"
+xcrun safari-web-extension-packager \
+    --project-location "$PROJECT_LOCATION" \
+    --app-name "$APP_NAME" \
+    --bundle-identifier "$BUNDLE_IDENTIFIER" \
+    --copy-resources \
+    --force \
+    --no-prompt \
+    --no-open \
+    ${PACKAGER_ARGS[@]+"${PACKAGER_ARGS[@]}"} \
+    "$EXTENSION_SRC"
 
 # Restore custom native sources. safari-web-extension-packager may regenerate
 # boilerplate files, so we re-apply our Safari-specific Swift handler, ATS
